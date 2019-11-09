@@ -1,0 +1,10 @@
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\bin\Debug\GameProject.exe.config
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\bin\Debug\GameProject.exe
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\bin\Debug\GameProject.pdb
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.csprojAssemblyReference.cache
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.Form1.resources
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.Properties.Resources.resources
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.csproj.GenerateResource.cache
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.exe
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.pdb
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.GameStartMenu.resources
