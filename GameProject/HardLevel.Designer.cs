@@ -1,6 +1,6 @@
 ﻿namespace GameProject
 {
-    partial class Form1
+    partial class HardLevel
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HardLevel));
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -199,7 +199,7 @@
             // 
             this.gameOver.AutoSize = true;
             this.gameOver.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameOver.Location = new System.Drawing.Point(96, 201);
+            this.gameOver.Location = new System.Drawing.Point(112, 217);
             this.gameOver.Name = "gameOver";
             this.gameOver.Size = new System.Drawing.Size(231, 46);
             this.gameOver.TabIndex = 17;
@@ -265,7 +265,7 @@
             this.Score.TabIndex = 23;
             this.Score.Text = "Scores:0";
             // 
-            // Form1
+            // HardLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -291,7 +291,7 @@
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.ForeColor = System.Drawing.Color.Crimson;
-            this.Name = "Form1";
+            this.Name = "HardLevel";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Player_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

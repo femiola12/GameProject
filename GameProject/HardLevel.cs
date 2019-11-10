@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GameProject
 {
-    public partial class Form1 : Form
+    public partial class HardLevel : Form
     {
-        public Form1()
+        public HardLevel()
         {
             InitializeComponent();
             gameOver.Visible = false;
@@ -127,7 +127,7 @@ namespace GameProject
         }
 
         Random rn = new Random();
-        int x, y;
+        int x;
 
         private void defender(int speed)
         {

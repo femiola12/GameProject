@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Difficultys.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Difficultys.Designer.cs">
+      <DependentUpon>Difficultys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Easy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Easy.Designer.cs">
+      <DependentUpon>Easy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HardLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HardLevel.Designer.cs">
+      <DependentUpon>HardLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="GameStartMenu.cs">
       <SubType>Form</SubType>
@@ -58,10 +70,22 @@
     <Compile Include="GameStartMenu.Designer.cs">
       <DependentUpon>GameStartMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Option.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Option.Designer.cs">
+      <DependentUpon>Option.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Difficultys.resx">
+      <DependentUpon>Difficultys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Easy.resx">
+      <DependentUpon>Easy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HardLevel.resx">
+      <DependentUpon>HardLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameStartMenu.resx">
       <DependentUpon>GameStartMenu.cs</DependentUpon>

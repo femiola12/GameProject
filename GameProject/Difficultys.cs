@@ -10,24 +10,18 @@ using System.Windows.Forms;
 
 namespace GameProject
 {
-    public partial class GameStartMenu : Form
+    public partial class Difficultys : Form
     {
-        public GameStartMenu()
+        public Difficultys()
         {
             InitializeComponent();
         }
 
-        private void Quit_button_Click(object sender, EventArgs e)
-        {
-             Application.Exit();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Difficultys Check = new Difficultys();
+            Easy Check = new Easy();
             Check.Show();
             Hide();
         }
     }
 }
-
