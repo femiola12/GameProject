@@ -10,3 +10,4 @@ C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\Gam
 C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.Difficultys.resources
 C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.HardLevel.resources
 C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.Easy.resources
+C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\obj\Debug\GameProject.Medium.resources

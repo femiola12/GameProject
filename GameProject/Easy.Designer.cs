@@ -40,6 +40,7 @@
             this.player1 = new System.Windows.Forms.PictureBox();
             this.Score = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.defender2 = new System.Windows.Forms.PictureBox();
             this.defender3 = new System.Windows.Forms.PictureBox();
@@ -50,7 +51,6 @@
             this.ballCoin2 = new System.Windows.Forms.PictureBox();
             this.ballCoin1 = new System.Windows.Forms.PictureBox();
             this.ballCoin4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.defender1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender4)).BeginInit();
@@ -69,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // defender1
@@ -182,6 +182,16 @@
             this.panel1.Size = new System.Drawing.Size(532, 241);
             this.panel1.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(28, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(483, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -281,21 +291,11 @@
             this.ballCoin4.TabIndex = 24;
             this.ballCoin4.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(28, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(483, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // Easy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(507, 825);
             this.Controls.Add(this.player1);
             this.Controls.Add(this.GameOver);
@@ -329,6 +329,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.player1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender4)).EndInit();
@@ -338,7 +339,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

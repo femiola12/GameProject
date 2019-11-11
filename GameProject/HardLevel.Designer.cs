@@ -34,31 +34,35 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.con2 = new System.Windows.Forms.PictureBox();
+            this.con3 = new System.Windows.Forms.PictureBox();
+            this.con5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.con1 = new System.Windows.Forms.PictureBox();
+            this.con4 = new System.Windows.Forms.PictureBox();
             this.player_defender1 = new System.Windows.Forms.PictureBox();
             this.player_defender2 = new System.Windows.Forms.PictureBox();
             this.player_defender3 = new System.Windows.Forms.PictureBox();
-            this.gameOver = new System.Windows.Forms.Label();
             this.coin4 = new System.Windows.Forms.PictureBox();
             this.coin2 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.coin3 = new System.Windows.Forms.PictureBox();
             this.coin1 = new System.Windows.Forms.PictureBox();
             this.Score = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Points = new System.Windows.Forms.Label();
+            this.GameOver = new System.Windows.Forms.PictureBox();
+            this.GoldWin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender3)).BeginInit();
@@ -67,12 +71,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoldWin)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Location = new System.Drawing.Point(463, -89);
+            this.pictureBox4.Location = new System.Drawing.Point(499, -27);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(12, 724);
             this.pictureBox4.TabIndex = 3;
@@ -98,42 +106,42 @@
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
-            this.player.Location = new System.Drawing.Point(84, 502);
+            this.player.Location = new System.Drawing.Point(183, 476);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(47, 72);
+            this.player.Size = new System.Drawing.Size(117, 98);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 6;
             this.player.TabStop = false;
             // 
-            // pictureBox2
+            // con2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(333, 202);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 58);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.con2.Image = ((System.Drawing.Image)(resources.GetObject("con2.Image")));
+            this.con2.Location = new System.Drawing.Point(333, 202);
+            this.con2.Name = "con2";
+            this.con2.Size = new System.Drawing.Size(77, 58);
+            this.con2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.con2.TabIndex = 8;
+            this.con2.TabStop = false;
             // 
-            // pictureBox1
+            // con3
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(160, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.con3.Image = ((System.Drawing.Image)(resources.GetObject("con3.Image")));
+            this.con3.Location = new System.Drawing.Point(160, 74);
+            this.con3.Name = "con3";
+            this.con3.Size = new System.Drawing.Size(77, 57);
+            this.con3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.con3.TabIndex = 9;
+            this.con3.TabStop = false;
             // 
-            // pictureBox3
+            // con5
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(367, 22);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(77, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
+            this.con5.Image = ((System.Drawing.Image)(resources.GetObject("con5.Image")));
+            this.con5.Location = new System.Drawing.Point(367, 22);
+            this.con5.Name = "con5";
+            this.con5.Size = new System.Drawing.Size(77, 58);
+            this.con5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.con5.TabIndex = 10;
+            this.con5.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -145,25 +153,25 @@
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox7
+            // con1
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(333, 376);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(77, 58);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 12;
-            this.pictureBox7.TabStop = false;
+            this.con1.Image = ((System.Drawing.Image)(resources.GetObject("con1.Image")));
+            this.con1.Location = new System.Drawing.Point(385, 380);
+            this.con1.Name = "con1";
+            this.con1.Size = new System.Drawing.Size(77, 58);
+            this.con1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.con1.TabIndex = 12;
+            this.con1.TabStop = false;
             // 
-            // pictureBox8
+            // con4
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(39, 44);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(77, 58);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 13;
-            this.pictureBox8.TabStop = false;
+            this.con4.Image = ((System.Drawing.Image)(resources.GetObject("con4.Image")));
+            this.con4.Location = new System.Drawing.Point(39, 44);
+            this.con4.Name = "con4";
+            this.con4.Size = new System.Drawing.Size(77, 58);
+            this.con4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.con4.TabIndex = 13;
+            this.con4.TabStop = false;
             // 
             // player_defender1
             // 
@@ -194,16 +202,6 @@
             this.player_defender3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player_defender3.TabIndex = 16;
             this.player_defender3.TabStop = false;
-            // 
-            // gameOver
-            // 
-            this.gameOver.AutoSize = true;
-            this.gameOver.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameOver.Location = new System.Drawing.Point(112, 217);
-            this.gameOver.Name = "gameOver";
-            this.gameOver.Size = new System.Drawing.Size(231, 46);
-            this.gameOver.TabIndex = 17;
-            this.gameOver.Text = "Game Over";
             // 
             // coin4
             // 
@@ -265,31 +263,83 @@
             this.Score.TabIndex = 23;
             this.Score.Text = "Scores:0";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.pictureBox9);
+            this.panel1.Controls.Add(this.Points);
+            this.panel1.Location = new System.Drawing.Point(-18, 580);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(532, 241);
+            this.panel1.TabIndex = 24;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(28, 71);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(483, 85);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 9;
+            this.pictureBox9.TabStop = false;
+            // 
+            // Points
+            // 
+            this.Points.AutoSize = true;
+            this.Points.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Points.Location = new System.Drawing.Point(190, 34);
+            this.Points.Name = "Points";
+            this.Points.Size = new System.Drawing.Size(146, 34);
+            this.Points.TabIndex = 8;
+            this.Points.Text = "Points : 0";
+            // 
+            // GameOver
+            // 
+            this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
+            this.GameOver.Location = new System.Drawing.Point(74, 220);
+            this.GameOver.Name = "GameOver";
+            this.GameOver.Size = new System.Drawing.Size(336, 125);
+            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GameOver.TabIndex = 25;
+            this.GameOver.TabStop = false;
+            // 
+            // GoldWin
+            // 
+            this.GoldWin.Image = ((System.Drawing.Image)(resources.GetObject("GoldWin.Image")));
+            this.GoldWin.Location = new System.Drawing.Point(96, 220);
+            this.GoldWin.Name = "GoldWin";
+            this.GoldWin.Size = new System.Drawing.Size(301, 138);
+            this.GoldWin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GoldWin.TabIndex = 26;
+            this.GoldWin.TabStop = false;
+            // 
             // HardLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(474, 586);
+            this.ClientSize = new System.Drawing.Size(507, 752);
+            this.Controls.Add(this.GameOver);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Score);
-            this.Controls.Add(this.coin1);
             this.Controls.Add(this.coin3);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.coin2);
             this.Controls.Add(this.coin4);
-            this.Controls.Add(this.gameOver);
-            this.Controls.Add(this.player_defender3);
-            this.Controls.Add(this.player_defender2);
-            this.Controls.Add(this.player_defender1);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.GoldWin);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.con1);
+            this.Controls.Add(this.con2);
+            this.Controls.Add(this.coin2);
+            this.Controls.Add(this.coin1);
+            this.Controls.Add(this.player_defender1);
+            this.Controls.Add(this.player_defender2);
+            this.Controls.Add(this.con3);
+            this.Controls.Add(this.con4);
+            this.Controls.Add(this.player_defender3);
+            this.Controls.Add(this.con5);
             this.ForeColor = System.Drawing.Color.Crimson;
             this.Name = "HardLevel";
             this.Text = "Form1";
@@ -297,12 +347,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.con4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender3)).EndInit();
@@ -311,6 +361,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoldWin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,22 +376,26 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.PictureBox player;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox con2;
+        private System.Windows.Forms.PictureBox con3;
+        private System.Windows.Forms.PictureBox con5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox con1;
+        private System.Windows.Forms.PictureBox con4;
         private System.Windows.Forms.PictureBox player_defender1;
         private System.Windows.Forms.PictureBox player_defender2;
         private System.Windows.Forms.PictureBox player_defender3;
-        private System.Windows.Forms.Label gameOver;
         private System.Windows.Forms.PictureBox coin4;
         private System.Windows.Forms.PictureBox coin2;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox coin3;
         private System.Windows.Forms.PictureBox coin1;
         private System.Windows.Forms.Label Score;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label Points;
+        private System.Windows.Forms.PictureBox GameOver;
+        private System.Windows.Forms.PictureBox GoldWin;
     }
 }
 

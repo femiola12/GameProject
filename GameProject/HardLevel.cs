@@ -15,14 +15,15 @@ namespace GameProject
         public HardLevel()
         {
             InitializeComponent();
-            gameOver.Visible = false;
+            GoldWin.Visible = false;
+            GameOver.Visible = false;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             goalPost_Move(gameSpeed);
             defender(gameSpeed);
-            game_over();
+           // game_over();
             scores(gameSpeed);
             collect_coins();
         }
@@ -124,6 +125,15 @@ namespace GameProject
                 Score.Text = "Score=" + collectionCoins.ToString();
                 pictureBox10.Location = new Point(x, 0);
             }
+
+            else
+            {
+                if (collectionCoins == 20)
+                {
+                    GoldWin.Visible = true;
+                    timer.Enabled = false;
+                }
+            }
         }
 
         Random rn = new Random();
@@ -138,6 +148,13 @@ namespace GameProject
                 player_defender1.Top = 0;
                 
                 player_defender1.Location = new Point(x, 0);
+            }
+            if(coin1.Top > 500)
+            {
+                x = rn.Next(0, 122);
+                coin1.Top = 0;
+
+                coin1.Location = new Point(x, 0);
             }
             else
             {
@@ -170,54 +187,54 @@ namespace GameProject
 
         }
 
-        private void game_over()
-        {
-            if (player.Bounds.IntersectsWith(player_defender1.Bounds))
-            {
-                timer.Enabled = false;
-                gameOver.Visible = true;
-            }
-            if (player.Bounds.IntersectsWith(player_defender2.Bounds))
-            {
-                timer.Enabled = false;
-                gameOver.Visible = true;
-            }
-            if (player.Bounds.IntersectsWith(player_defender3.Bounds))
-            {
-                timer.Enabled = false;
-                gameOver.Visible = true;
-            }
-        }
+        //private void game_over()
+        //{
+        //    if (player.Bounds.IntersectsWith(player_defender1.Bounds))
+        //    {
+        //        timer.Enabled = false;
+        //        GameOver.Visible = true;
+        //    }
+        //    if (player.Bounds.IntersectsWith(player_defender2.Bounds))
+        //    {
+        //        timer.Enabled = false;
+        //        GameOver.Visible = true;
+        //    }
+        //    if (player.Bounds.IntersectsWith(player_defender3.Bounds))
+        //    {
+        //        timer.Enabled = false;
+        //        GameOver.Visible = true;
+        //    }
+        //}
 
         //Here I am creating a method of the pitch speed
         private void goalPost_Move(int pitchSpeed) 
         {
 
-            if (pictureBox1.Top >= 500)
+            if (con3.Top >= 500)
             {
-                pictureBox1.Top = 0;
+                con3.Top = 0;
             }
             else
             {
-                pictureBox1.Top += pitchSpeed;
+                con3.Top += pitchSpeed;
             }
 
-            if (pictureBox2.Top >= 500)
+            if (con2.Top >= 500)
             {
-                pictureBox2.Top = 0;
+                con2.Top = 0;
             }
             else
             {
-                pictureBox2.Top += pitchSpeed;
+                con2.Top += pitchSpeed;
             }
 
-            if (pictureBox3.Top >= 500)
+            if (con5.Top >= 500)
             {
-                pictureBox3.Top = 0;
+                con5.Top = 0;
             }
             else
             {
-                pictureBox3.Top += pitchSpeed;
+                con5.Top += pitchSpeed;
             }
 
             if (pictureBox6.Top >= 500)
@@ -229,22 +246,22 @@ namespace GameProject
                 pictureBox6.Top += pitchSpeed;
             }
 
-            if (pictureBox7.Top >= 500)
+            if (con1.Top >= 500)
             {
-                pictureBox7.Top = 0;
+                con1.Top = 0;
             }
             else
             {
-                pictureBox7.Top += pitchSpeed;
+                con1.Top += pitchSpeed;
             }
 
-            if (pictureBox8.Top >= 500)
+            if (con4.Top >= 500)
             {
-                pictureBox8.Top = 0;
+                con4.Top = 0;
             }
             else
             {
-                pictureBox8.Top += pitchSpeed;
+                con4.Top += pitchSpeed;
             }
 
 
