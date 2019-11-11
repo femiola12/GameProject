@@ -19,8 +19,15 @@ namespace GameProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Easy Check = new Easy();
-            Check.Show();
+            Easy es = new Easy();
+            es.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HardLevel hd = new HardLevel();
+            hd.Show();
             Hide();
         }
     }

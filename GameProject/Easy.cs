@@ -21,10 +21,11 @@ namespace GameProject
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            fans(5);
+            fans(3);
             defender(1);
             game_over();
             points();
+            ball(3);
 
         }
 
@@ -33,32 +34,79 @@ namespace GameProject
             if (player1.Bounds.IntersectsWith(defender1.Bounds))
             {
                 timer1.Enabled = false;
+                
                 GameOver.Visible = true;
             }
-            //if (player.Bounds.IntersectsWith(player_defender2.Bounds))
-            //{
-            //    timer.Enabled = false;
-            //    gameOver.Visible = true;
-            //}
-            //if (player.Bounds.IntersectsWith(player_defender3.Bounds))
-            //{
-            //    timer.Enabled = false;
-            //    gameOver.Visible = true;
-            //}
+            if (player1.Bounds.IntersectsWith(defender2.Bounds))
+            {
+                timer1.Enabled = false;
+                
+                GameOver.Visible = true;
+            }
+            if (player1.Bounds.IntersectsWith(defender3.Bounds))
+            {
+                timer1.Enabled = false;
+                
+                GameOver.Visible = true;
+            }
+            if (player1.Bounds.IntersectsWith(defender4.Bounds))
+            {
+                timer1.Enabled = false;
+               
+                GameOver.Visible = true;
+            }
         }
 
-        int pointCoins = 1;
+        int pointCoins = 0;
+
         private void points()
         {
             if (player1.Bounds.IntersectsWith(ballCoin1.Bounds))
             {
                 pointCoins++;
                 Score.Text = "Score=" + pointCoins.ToString();
-                ballCoin1.Location = new Point(x, 0);
-                Win.Visible = true;
-                timer1.Enabled = false;
+                x = rn.Next(50, 300);
+                ballCoin1.Location = new Point(x, 0);   
             }
+
+            if (player1.Bounds.IntersectsWith(ballCoin2.Bounds))
+            {
+                pointCoins++;
+                Score.Text = "Score=" + pointCoins.ToString();
+                x = rn.Next(50, 300);
+                ballCoin2.Location = new Point(x, 0);
+            }
+
+            if (player1.Bounds.IntersectsWith(ballCoin3.Bounds))
+            {
+                pointCoins++;
+                Score.Text = "Score=" + pointCoins.ToString();
+                x = rn.Next(50, 300);
+                ballCoin3.Location = new Point(x, 0);
+            }
+            if (player1.Bounds.IntersectsWith(ballCoin4.Bounds))
+            {
+                pointCoins++;
+                Score.Text = "Score=" + pointCoins.ToString();
+                x = rn.Next(50, 300);
+                ballCoin4.Location = new Point(x, 0);
+            }
+            else
+            {
+                if(pointCoins == 25)
+                {
+                    Win.Visible = true;
+                    timer1.Enabled = false;
+                }
+            }
+
+
         }
+
+
+
+
+
         Random rn = new Random();
         int x;
         private void defender(int defenderSpeed)
@@ -66,7 +114,7 @@ namespace GameProject
 
             if (defender1.Top >= 500)
             {
-                x = rn.Next(0, 200);
+                x = rn.Next(0, 122);
                 defender1.Top = 0;
 
                 defender1.Location = new Point(x, 0);
@@ -75,41 +123,83 @@ namespace GameProject
             {
                 defender1.Top += defenderSpeed;
             }
-            //if (defender2.Top >= 500)
-            //{
-            //     x = rn.Next(0, 400);
-            //    defender2.Top = 0;
+            if (defender2.Top >= 500)
+            {
+                x = rn.Next(0, 400);
+                defender2.Top = 0;
 
-            //     defender1.Location = new Point(x, 0);
-            //}
-            //else
-            //{
-            //    defender2.Top += defenderSpeed;
-            //}
-            //if (defender3.Top >= 500)
-            //{
-            //     x = rn.Next(200, 350);
-            //    defender3.Top = 0;
+                defender1.Location = new Point(x, 0);
+            }
+            else
+            {
+                defender2.Top += defenderSpeed;
+            }
+            if (defender3.Top >= 500)
+            {
+                x = rn.Next(0, 350);
+                defender3.Top = 0;
 
-            //     defender1.Location = new Point(x, 0);
-            //}
-            //else
-            //{
-            //    defender3.Top += defenderSpeed;
-            //}
-            //if (defender4.Top >= 500)
-            //{
-            //     x = rn.Next(0, 122);
-            //    defender4.Top = 0;
+                defender1.Location = new Point(x, 0);
+            }
+            else
+            {
+                defender3.Top += defenderSpeed;
+            }
+            if (defender4.Top >= 500)
+            {
+                x = rn.Next(0, 122);
+                defender4.Top = 0;
 
-            //     defender1.Location = new Point(x, 0);
-            //}
-            //else
-            //{
-            //    defender4.Top += defenderSpeed;
-            //}
+                defender1.Location = new Point(x, 0);
+            }
+            else
+            {
+                defender4.Top += defenderSpeed;
+            }
         }
 
+
+        private void ball(int ballSpeed)
+        {
+            if (ballCoin1.Top >= 500)
+            {
+                x = rn.Next(60, 122);
+                ballCoin1.Top = 0;
+            }
+            else
+            {
+                ballCoin1.Top += ballSpeed;
+            }
+
+            if (ballCoin2.Top >= 500)
+            {
+                x = rn.Next(60, 100);
+                ballCoin2.Top = 0;
+            }
+            else
+            {
+                ballCoin2.Top += ballSpeed;
+            }
+
+            if (ballCoin3.Top >= 500)
+            {
+                x = rn.Next(0, 350);
+                ballCoin3.Top = 0;
+            }
+            else
+            {
+                ballCoin3.Top += ballSpeed;
+            }
+            if (ballCoin4.Top >= 500)
+            {
+                x = rn.Next(0, 122);
+                ballCoin4.Top = 0;
+            }
+            else
+            {
+                ballCoin4.Top += ballSpeed;
+            }
+        }
         private void fans(int fanSpeed)
         {
             if (pictureBox5.Top >= 500)
@@ -164,14 +254,6 @@ namespace GameProject
             {
                 pictureBox4.Top += fanSpeed;
             }
-            if(ballCoin1.Top >= 500)
-            {
-                ballCoin1.Top = 0;
-            }
-            else
-            {
-                ballCoin1.Top += fanSpeed;
-            }
         }
 
         private void player_Keydown(object sender, KeyEventArgs e)
@@ -179,13 +261,14 @@ namespace GameProject
             if(e.KeyCode == Keys.Left)
             {
                 if(player1.Left > 60)
-                player1.Left += -10;
+                player1.Left += -20;
             }
             else if (e.KeyCode == Keys.Right)
             {
                 if(player1.Right < 310)
-                player1.Left += 10;
+                player1.Left += 20;
             }
+
         }
     }
 }
