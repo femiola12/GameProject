@@ -17,6 +17,7 @@ namespace GameProject
             InitializeComponent();
             winSliver.Visible = false;
             GameOver.Visible = false;
+            RestartPanel.Visible = false;
 
         }
 
@@ -37,25 +38,25 @@ namespace GameProject
             if (player2.Bounds.IntersectsWith(defender2.Bounds))
             {
                 gameTimer.Enabled = false;
-
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
             if (player2.Bounds.IntersectsWith(defender3.Bounds))
             {
                 gameTimer.Enabled = false;
-
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
             if (player2.Bounds.IntersectsWith(defender4.Bounds))
             {
                 gameTimer.Enabled = false;
-
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
             if (player2.Bounds.IntersectsWith(defender5.Bounds))
             {
                 gameTimer.Enabled = false;
-
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
         }
@@ -271,6 +272,23 @@ namespace GameProject
 
         }
 
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            Medium med = new Medium();
+            med.Show();
+            Hide();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Difficultys dif = new Difficultys();
+            dif.Show();
+            Hide();
+        }
+
+        private void Quit_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

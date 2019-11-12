@@ -17,6 +17,7 @@ namespace GameProject
             InitializeComponent();
             Win.Visible = false;
             GameOver.Visible = false;
+            RestartPanel.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -34,25 +35,25 @@ namespace GameProject
             if (player1.Bounds.IntersectsWith(defender1.Bounds))
             {
                 timer1.Enabled = false;
-                
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
             if (player1.Bounds.IntersectsWith(defender2.Bounds))
             {
                 timer1.Enabled = false;
-                
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
             if (player1.Bounds.IntersectsWith(defender3.Bounds))
             {
                 timer1.Enabled = false;
-                
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
             if (player1.Bounds.IntersectsWith(defender4.Bounds))
             {
                 timer1.Enabled = false;
-               
+                RestartPanel.Visible = true;
                 GameOver.Visible = true;
             }
         }
@@ -96,7 +97,9 @@ namespace GameProject
                 if(pointCoins == 25)
                 {
                     Win.Visible = true;
+                    RestartPanel.Visible = true;
                     timer1.Enabled = false;
+                    
                 }
             }
 
@@ -269,6 +272,25 @@ namespace GameProject
                 player1.Left += 20;
             }
 
+        }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            Easy ea = new Easy();
+            ea.Show();
+            Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Difficultys dif = new Difficultys();
+            dif.Show();
+            Hide();
+        }
+
+        private void Quit_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

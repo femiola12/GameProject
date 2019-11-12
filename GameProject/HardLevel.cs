@@ -17,13 +17,14 @@ namespace GameProject
             InitializeComponent();
             GoldWin.Visible = false;
             GameOver.Visible = false;
+            RestartPanel.Visible = false;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             goalPost_Move(gameSpeed);
             defender(gameSpeed);
-           // game_over();
+            game_over();
             scores(gameSpeed);
             collect_coins();
         }
@@ -91,6 +92,8 @@ namespace GameProject
             }
         }
 
+
+
         int collectionCoins = 0;
 
         private void collect_coins()
@@ -128,10 +131,11 @@ namespace GameProject
 
             else
             {
-                if (collectionCoins == 20)
+                if (collectionCoins == 10)
                 {
                     GoldWin.Visible = true;
                     timer.Enabled = false;
+                    RestartPanel.Visible = true;
                 }
             }
         }
@@ -187,24 +191,56 @@ namespace GameProject
 
         }
 
-        //private void game_over()
-        //{
-        //    if (player.Bounds.IntersectsWith(player_defender1.Bounds))
-        //    {
-        //        timer.Enabled = false;
-        //        GameOver.Visible = true;
-        //    }
-        //    if (player.Bounds.IntersectsWith(player_defender2.Bounds))
-        //    {
-        //        timer.Enabled = false;
-        //        GameOver.Visible = true;
-        //    }
-        //    if (player.Bounds.IntersectsWith(player_defender3.Bounds))
-        //    {
-        //        timer.Enabled = false;
-        //        GameOver.Visible = true;
-        //    }
-        //}
+        private void game_over()
+        {
+            if (player.Bounds.IntersectsWith(player_defender1.Bounds))
+            {
+                timer.Enabled = false;
+                GameOver.Visible = true;
+                RestartPanel.Visible = true;
+            }
+            if (player.Bounds.IntersectsWith(player_defender2.Bounds))
+            {
+                timer.Enabled = false;
+                GameOver.Visible = true;
+                RestartPanel.Visible = true;
+            }
+            if (player.Bounds.IntersectsWith(player_defender3.Bounds))
+            {
+                timer.Enabled = false;
+                GameOver.Visible = true;
+                RestartPanel.Visible = true;
+            }
+            //if (player.Bounds.IntersectsWith(con1.Bounds))
+            //{
+            //    timer.Enabled = false;
+            //    GameOver.Visible = true;
+            //}
+            if (player.Bounds.IntersectsWith(con2.Bounds))
+            {
+                timer.Enabled = false;
+                GameOver.Visible = true;
+                RestartPanel.Visible = true;
+            }
+            if (player.Bounds.IntersectsWith(con3.Bounds))
+            {
+                timer.Enabled = false;
+                GameOver.Visible = true;
+                RestartPanel.Visible = true;
+            }
+            if (player.Bounds.IntersectsWith(con4.Bounds))
+            {
+                timer.Enabled = false;
+                GameOver.Visible = true;
+                RestartPanel.Visible = true;
+            }
+            if (player.Bounds.IntersectsWith(con5.Bounds))
+            {
+                timer.Enabled = false;
+                GameOver.Visible = true;
+                RestartPanel.Visible = true;
+            }
+        }
 
         //Here I am creating a method of the pitch speed
         private void goalPost_Move(int pitchSpeed) 
@@ -246,14 +282,14 @@ namespace GameProject
                 pictureBox6.Top += pitchSpeed;
             }
 
-            if (con1.Top >= 500)
-            {
-                con1.Top = 0;
-            }
-            else
-            {
-                con1.Top += pitchSpeed;
-            }
+            //if (con1.Top >= 500)
+            //{
+            //    con1.Top = 0;
+            //}
+            //else
+            //{
+            //    con1.Top += pitchSpeed;
+            //}
 
             if (con4.Top >= 500)
             {
@@ -301,6 +337,15 @@ namespace GameProject
             }
 
 
+        }
+
+
+
+        private void restartButton_Click_1(object sender, EventArgs e)
+        {
+            HardLevel hd = new HardLevel();
+            hd.Show();
+            Hide();
         }
     }
 }

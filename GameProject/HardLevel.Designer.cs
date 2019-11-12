@@ -38,7 +38,6 @@
             this.con3 = new System.Windows.Forms.PictureBox();
             this.con5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.con1 = new System.Windows.Forms.PictureBox();
             this.con4 = new System.Windows.Forms.PictureBox();
             this.player_defender1 = new System.Windows.Forms.PictureBox();
             this.player_defender2 = new System.Windows.Forms.PictureBox();
@@ -51,9 +50,12 @@
             this.Score = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.Points = new System.Windows.Forms.Label();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.GoldWin = new System.Windows.Forms.PictureBox();
+            this.RestartPanel = new System.Windows.Forms.Panel();
+            this.backFunction = new System.Windows.Forms.Button();
+            this.Quit_button = new System.Windows.Forms.Button();
+            this.restartButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -61,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.con3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.con5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.con1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.con4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender2)).BeginInit();
@@ -75,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GoldWin)).BeginInit();
+            this.RestartPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -126,7 +128,7 @@
             // con3
             // 
             this.con3.Image = ((System.Drawing.Image)(resources.GetObject("con3.Image")));
-            this.con3.Location = new System.Drawing.Point(160, 74);
+            this.con3.Location = new System.Drawing.Point(134, 100);
             this.con3.Name = "con3";
             this.con3.Size = new System.Drawing.Size(77, 57);
             this.con3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,20 +155,10 @@
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
             // 
-            // con1
-            // 
-            this.con1.Image = ((System.Drawing.Image)(resources.GetObject("con1.Image")));
-            this.con1.Location = new System.Drawing.Point(385, 380);
-            this.con1.Name = "con1";
-            this.con1.Size = new System.Drawing.Size(77, 58);
-            this.con1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.con1.TabIndex = 12;
-            this.con1.TabStop = false;
-            // 
             // con4
             // 
             this.con4.Image = ((System.Drawing.Image)(resources.GetObject("con4.Image")));
-            this.con4.Location = new System.Drawing.Point(39, 44);
+            this.con4.Location = new System.Drawing.Point(16, 12);
             this.con4.Name = "con4";
             this.con4.Size = new System.Drawing.Size(77, 58);
             this.con4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +188,7 @@
             // player_defender3
             // 
             this.player_defender3.Image = ((System.Drawing.Image)(resources.GetObject("player_defender3.Image")));
-            this.player_defender3.Location = new System.Drawing.Point(255, 12);
+            this.player_defender3.Location = new System.Drawing.Point(122, 1);
             this.player_defender3.Name = "player_defender3";
             this.player_defender3.Size = new System.Drawing.Size(61, 67);
             this.player_defender3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,7 +238,7 @@
             // coin1
             // 
             this.coin1.Image = ((System.Drawing.Image)(resources.GetObject("coin1.Image")));
-            this.coin1.Location = new System.Drawing.Point(265, 132);
+            this.coin1.Location = new System.Drawing.Point(283, 12);
             this.coin1.Name = "coin1";
             this.coin1.Size = new System.Drawing.Size(35, 35);
             this.coin1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +249,7 @@
             // 
             this.Score.AutoSize = true;
             this.Score.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Score.Location = new System.Drawing.Point(16, -2);
+            this.Score.Location = new System.Drawing.Point(184, 20);
             this.Score.Name = "Score";
             this.Score.Size = new System.Drawing.Size(161, 36);
             this.Score.TabIndex = 23;
@@ -267,7 +259,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.Points);
+            this.panel1.Controls.Add(this.Score);
             this.panel1.Location = new System.Drawing.Point(-18, 580);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(532, 241);
@@ -283,20 +275,10 @@
             this.pictureBox9.TabIndex = 9;
             this.pictureBox9.TabStop = false;
             // 
-            // Points
-            // 
-            this.Points.AutoSize = true;
-            this.Points.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Points.Location = new System.Drawing.Point(190, 34);
-            this.Points.Name = "Points";
-            this.Points.Size = new System.Drawing.Size(146, 34);
-            this.Points.TabIndex = 8;
-            this.Points.Text = "Points : 0";
-            // 
             // GameOver
             // 
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
-            this.GameOver.Location = new System.Drawing.Point(74, 220);
+            this.GameOver.Location = new System.Drawing.Point(74, 135);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(336, 125);
             this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -306,31 +288,84 @@
             // GoldWin
             // 
             this.GoldWin.Image = ((System.Drawing.Image)(resources.GetObject("GoldWin.Image")));
-            this.GoldWin.Location = new System.Drawing.Point(96, 220);
+            this.GoldWin.Location = new System.Drawing.Point(96, 129);
             this.GoldWin.Name = "GoldWin";
             this.GoldWin.Size = new System.Drawing.Size(301, 138);
             this.GoldWin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GoldWin.TabIndex = 26;
             this.GoldWin.TabStop = false;
             // 
+            // RestartPanel
+            // 
+            this.RestartPanel.BackColor = System.Drawing.Color.GreenYellow;
+            this.RestartPanel.Controls.Add(this.backFunction);
+            this.RestartPanel.Controls.Add(this.Quit_button);
+            this.RestartPanel.Controls.Add(this.restartButton);
+            this.RestartPanel.Location = new System.Drawing.Point(94, 248);
+            this.RestartPanel.Name = "RestartPanel";
+            this.RestartPanel.Size = new System.Drawing.Size(319, 257);
+            this.RestartPanel.TabIndex = 37;
+            // 
+            // backFunction
+            // 
+            this.backFunction.BackColor = System.Drawing.Color.Transparent;
+            this.backFunction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backFunction.BackgroundImage")));
+            this.backFunction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backFunction.FlatAppearance.BorderSize = 0;
+            this.backFunction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backFunction.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.backFunction.ForeColor = System.Drawing.Color.White;
+            this.backFunction.Location = new System.Drawing.Point(96, 84);
+            this.backFunction.Name = "backFunction";
+            this.backFunction.Size = new System.Drawing.Size(128, 70);
+            this.backFunction.TabIndex = 29;
+            this.backFunction.UseVisualStyleBackColor = false;
+            // 
+            // Quit_button
+            // 
+            this.Quit_button.BackColor = System.Drawing.Color.Transparent;
+            this.Quit_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Quit_button.BackgroundImage")));
+            this.Quit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Quit_button.FlatAppearance.BorderSize = 0;
+            this.Quit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Quit_button.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Quit_button.ForeColor = System.Drawing.Color.Yellow;
+            this.Quit_button.Location = new System.Drawing.Point(104, 171);
+            this.Quit_button.Name = "Quit_button";
+            this.Quit_button.Size = new System.Drawing.Size(128, 70);
+            this.Quit_button.TabIndex = 28;
+            this.Quit_button.UseVisualStyleBackColor = false;
+            // 
+            // restartButton
+            // 
+            this.restartButton.BackColor = System.Drawing.Color.Transparent;
+            this.restartButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("restartButton.BackgroundImage")));
+            this.restartButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.restartButton.FlatAppearance.BorderSize = 0;
+            this.restartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.restartButton.ForeColor = System.Drawing.Color.Red;
+            this.restartButton.Location = new System.Drawing.Point(104, 19);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(128, 70);
+            this.restartButton.TabIndex = 27;
+            this.restartButton.UseVisualStyleBackColor = false;
+            this.restartButton.Click += new System.EventHandler(this.restartButton_Click_1);
+            // 
             // HardLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.GreenYellow;
             this.ClientSize = new System.Drawing.Size(507, 752);
+            this.Controls.Add(this.RestartPanel);
             this.Controls.Add(this.GameOver);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Score);
-            this.Controls.Add(this.coin3);
-            this.Controls.Add(this.coin4);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.GoldWin);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.con1);
             this.Controls.Add(this.con2);
             this.Controls.Add(this.coin2);
             this.Controls.Add(this.coin1);
@@ -340,6 +375,8 @@
             this.Controls.Add(this.con4);
             this.Controls.Add(this.player_defender3);
             this.Controls.Add(this.con5);
+            this.Controls.Add(this.coin3);
+            this.Controls.Add(this.coin4);
             this.ForeColor = System.Drawing.Color.Crimson;
             this.Name = "HardLevel";
             this.Text = "Form1";
@@ -351,7 +388,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.con3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.con5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.con1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.con4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_defender2)).EndInit();
@@ -366,8 +402,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GoldWin)).EndInit();
+            this.RestartPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -380,7 +416,6 @@
         private System.Windows.Forms.PictureBox con3;
         private System.Windows.Forms.PictureBox con5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox con1;
         private System.Windows.Forms.PictureBox con4;
         private System.Windows.Forms.PictureBox player_defender1;
         private System.Windows.Forms.PictureBox player_defender2;
@@ -393,9 +428,12 @@
         private System.Windows.Forms.Label Score;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label Points;
         private System.Windows.Forms.PictureBox GameOver;
         private System.Windows.Forms.PictureBox GoldWin;
+        private System.Windows.Forms.Panel RestartPanel;
+        private System.Windows.Forms.Button backFunction;
+        private System.Windows.Forms.Button Quit_button;
+        private System.Windows.Forms.Button restartButton;
     }
 }
 

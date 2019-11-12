@@ -15,6 +15,7 @@ namespace GameProject
         public GameStartMenu()
         {
             InitializeComponent();
+
         }
 
         private void Quit_button_Click(object sender, EventArgs e)
@@ -27,6 +28,8 @@ namespace GameProject
             Difficultys Check = new Difficultys();
             Check.Show();
             Hide();
+
+
         }
     }
 }

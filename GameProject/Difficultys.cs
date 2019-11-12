@@ -37,5 +37,12 @@ namespace GameProject
             me.Show();
             Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GameStartMenu gsm = new GameStartMenu();
+            gsm.Show();
+            Hide();
+        }
     }
 }

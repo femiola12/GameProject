@@ -51,6 +51,10 @@
             this.ballCoin2 = new System.Windows.Forms.PictureBox();
             this.ballCoin1 = new System.Windows.Forms.PictureBox();
             this.ballCoin4 = new System.Windows.Forms.PictureBox();
+            this.RestartPanel = new System.Windows.Forms.Panel();
+            this.restartButton = new System.Windows.Forms.Button();
+            this.Quit_button = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.defender1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin4)).BeginInit();
+            this.RestartPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // defender1
@@ -234,7 +239,7 @@
             // Win
             // 
             this.Win.Image = ((System.Drawing.Image)(resources.GetObject("Win.Image")));
-            this.Win.Location = new System.Drawing.Point(108, 320);
+            this.Win.Location = new System.Drawing.Point(95, 186);
             this.Win.Name = "Win";
             this.Win.Size = new System.Drawing.Size(301, 138);
             this.Win.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -244,7 +249,7 @@
             // GameOver
             // 
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
-            this.GameOver.Location = new System.Drawing.Point(84, 323);
+            this.GameOver.Location = new System.Drawing.Point(85, 192);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(336, 125);
             this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -291,12 +296,71 @@
             this.ballCoin4.TabIndex = 24;
             this.ballCoin4.TabStop = false;
             // 
+            // RestartPanel
+            // 
+            this.RestartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.RestartPanel.Controls.Add(this.button4);
+            this.RestartPanel.Controls.Add(this.Quit_button);
+            this.RestartPanel.Controls.Add(this.restartButton);
+            this.RestartPanel.Location = new System.Drawing.Point(95, 311);
+            this.RestartPanel.Name = "RestartPanel";
+            this.RestartPanel.Size = new System.Drawing.Size(319, 257);
+            this.RestartPanel.TabIndex = 29;
+            // 
+            // restartButton
+            // 
+            this.restartButton.BackColor = System.Drawing.Color.Transparent;
+            this.restartButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("restartButton.BackgroundImage")));
+            this.restartButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.restartButton.FlatAppearance.BorderSize = 0;
+            this.restartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.restartButton.ForeColor = System.Drawing.Color.Red;
+            this.restartButton.Location = new System.Drawing.Point(104, 19);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(128, 70);
+            this.restartButton.TabIndex = 27;
+            this.restartButton.UseVisualStyleBackColor = false;
+            this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
+            // 
+            // Quit_button
+            // 
+            this.Quit_button.BackColor = System.Drawing.Color.Transparent;
+            this.Quit_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Quit_button.BackgroundImage")));
+            this.Quit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Quit_button.FlatAppearance.BorderSize = 0;
+            this.Quit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Quit_button.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Quit_button.ForeColor = System.Drawing.Color.Yellow;
+            this.Quit_button.Location = new System.Drawing.Point(104, 171);
+            this.Quit_button.Name = "Quit_button";
+            this.Quit_button.Size = new System.Drawing.Size(128, 70);
+            this.Quit_button.TabIndex = 28;
+            this.Quit_button.UseVisualStyleBackColor = false;
+            this.Quit_button.Click += new System.EventHandler(this.Quit_button_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(97, 90);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 70);
+            this.button4.TabIndex = 29;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Easy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(507, 825);
+            this.Controls.Add(this.RestartPanel);
             this.Controls.Add(this.player1);
             this.Controls.Add(this.GameOver);
             this.Controls.Add(this.Win);
@@ -339,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballCoin4)).EndInit();
+            this.RestartPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -366,5 +431,9 @@
         private System.Windows.Forms.PictureBox ballCoin1;
         private System.Windows.Forms.PictureBox ballCoin4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel RestartPanel;
+        private System.Windows.Forms.Button restartButton;
+        private System.Windows.Forms.Button Quit_button;
+        private System.Windows.Forms.Button button4;
     }
 }
