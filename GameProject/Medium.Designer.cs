@@ -198,7 +198,7 @@
             // 
             this.defender2.BackColor = System.Drawing.Color.Silver;
             this.defender2.Image = ((System.Drawing.Image)(resources.GetObject("defender2.Image")));
-            this.defender2.Location = new System.Drawing.Point(90, 314);
+            this.defender2.Location = new System.Drawing.Point(90, 414);
             this.defender2.Name = "defender2";
             this.defender2.Size = new System.Drawing.Size(72, 75);
             this.defender2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -255,7 +255,7 @@
             // con2
             // 
             this.con2.Image = ((System.Drawing.Image)(resources.GetObject("con2.Image")));
-            this.con2.Location = new System.Drawing.Point(251, 74);
+            this.con2.Location = new System.Drawing.Point(90, 243);
             this.con2.Name = "con2";
             this.con2.Size = new System.Drawing.Size(77, 58);
             this.con2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -265,7 +265,7 @@
             // GameOver
             // 
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
-            this.GameOver.Location = new System.Drawing.Point(96, 172);
+            this.GameOver.Location = new System.Drawing.Point(90, 112);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(336, 125);
             this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +275,7 @@
             // winSliver
             // 
             this.winSliver.Image = ((System.Drawing.Image)(resources.GetObject("winSliver.Image")));
-            this.winSliver.Location = new System.Drawing.Point(90, 172);
+            this.winSliver.Location = new System.Drawing.Point(90, 112);
             this.winSliver.Name = "winSliver";
             this.winSliver.Size = new System.Drawing.Size(336, 125);
             this.winSliver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,7 +285,7 @@
             // ballcoins1
             // 
             this.ballcoins1.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins1.Image")));
-            this.ballcoins1.Location = new System.Drawing.Point(90, 158);
+            this.ballcoins1.Location = new System.Drawing.Point(217, 65);
             this.ballcoins1.Name = "ballcoins1";
             this.ballcoins1.Size = new System.Drawing.Size(32, 32);
             this.ballcoins1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +305,7 @@
             // ballcoins3
             // 
             this.ballcoins3.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins3.Image")));
-            this.ballcoins3.Location = new System.Drawing.Point(344, 314);
+            this.ballcoins3.Location = new System.Drawing.Point(344, 327);
             this.ballcoins3.Name = "ballcoins3";
             this.ballcoins3.Size = new System.Drawing.Size(32, 32);
             this.ballcoins3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,7 +318,7 @@
             this.RestartPanel.Controls.Add(this.button4);
             this.RestartPanel.Controls.Add(this.Quit_button);
             this.RestartPanel.Controls.Add(this.restartButton);
-            this.RestartPanel.Location = new System.Drawing.Point(96, 303);
+            this.RestartPanel.Location = new System.Drawing.Point(87, 265);
             this.RestartPanel.Name = "RestartPanel";
             this.RestartPanel.Size = new System.Drawing.Size(319, 257);
             this.RestartPanel.TabIndex = 36;
