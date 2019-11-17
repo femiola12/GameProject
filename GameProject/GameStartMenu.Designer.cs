@@ -82,7 +82,7 @@
             this.Quit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Quit_button.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Quit_button.ForeColor = System.Drawing.Color.Yellow;
-            this.Quit_button.Location = new System.Drawing.Point(12, 212);
+            this.Quit_button.Location = new System.Drawing.Point(17, 190);
             this.Quit_button.Name = "Quit_button";
             this.Quit_button.Size = new System.Drawing.Size(161, 88);
             this.Quit_button.TabIndex = 4;

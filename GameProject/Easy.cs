@@ -22,8 +22,8 @@ namespace GameProject
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            fans(3);
-            defender(1);
+            fans(9);
+            defender(5);
             game_over();
             points();
             ball(3);
@@ -94,7 +94,7 @@ namespace GameProject
             }
             else
             {
-                if(pointCoins == 25)
+                if(pointCoins == 10)
                 {
                     Win.Visible = true;
                     RestartPanel.Visible = true;
@@ -205,6 +205,31 @@ namespace GameProject
         }
         private void fans(int fanSpeed)
         {
+            if (pictureBox.Top >= 500)
+            {
+                pictureBox.Top = 0;
+            }
+            else
+            {
+                pictureBox.Top += fanSpeed;
+            }
+            if (pictureBox2.Top >= 500)
+            {
+                pictureBox2.Top = 0;
+            }
+            else
+            {
+                pictureBox2.Top += fanSpeed;
+            }
+            if (pictureBox4.Top >= 500)
+            {
+                pictureBox4.Top = 0;
+            }
+            else
+            {
+                pictureBox4.Top += fanSpeed;
+            }
+
             if (pictureBox5.Top >= 500)
             {
                 pictureBox5.Top = 0;
@@ -232,30 +257,21 @@ namespace GameProject
                 pictureBox7.Top += fanSpeed;
             }
 
-            if (pictureBox3.Top >= 500)
+            if (pictureBox8.Top >= 500)
             {
-                pictureBox3.Top = 0;
+                pictureBox8.Top = 0;
             }
             else
             {
-                pictureBox3.Top += fanSpeed;
+                pictureBox8.Top += fanSpeed;
             }
-            if (pictureBox2.Top >= 500)
+            if (pictureBox9.Top >= 500)
             {
-                pictureBox2.Top = 0;
-            }
-            else
-            {
-                pictureBox2.Top += fanSpeed;
-            }
-
-            if (pictureBox4.Top >= 500)
-            {
-                pictureBox4.Top = 0;
+                pictureBox9.Top = 0;
             }
             else
             {
-                pictureBox4.Top += fanSpeed;
+                pictureBox9.Top += fanSpeed;
             }
         }
 
@@ -291,6 +307,11 @@ namespace GameProject
         private void Quit_button_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void GameOver_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

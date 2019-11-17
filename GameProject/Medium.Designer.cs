@@ -48,7 +48,6 @@
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.player2 = new System.Windows.Forms.PictureBox();
             this.con2 = new System.Windows.Forms.PictureBox();
-            this.con1 = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.winSliver = new System.Windows.Forms.PictureBox();
             this.ballcoins1 = new System.Windows.Forms.PictureBox();
@@ -74,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fan8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.con2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.con1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.winSliver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballcoins1)).BeginInit();
@@ -170,7 +168,7 @@
             this.defender4.Image = ((System.Drawing.Image)(resources.GetObject("defender4.Image")));
             this.defender4.Location = new System.Drawing.Point(324, -20);
             this.defender4.Name = "defender4";
-            this.defender4.Size = new System.Drawing.Size(91, 90);
+            this.defender4.Size = new System.Drawing.Size(91, 88);
             this.defender4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.defender4.TabIndex = 13;
             this.defender4.TabStop = false;
@@ -178,9 +176,9 @@
             // defender5
             // 
             this.defender5.Image = ((System.Drawing.Image)(resources.GetObject("defender5.Image")));
-            this.defender5.Location = new System.Drawing.Point(90, 48);
+            this.defender5.Location = new System.Drawing.Point(67, 2);
             this.defender5.Name = "defender5";
-            this.defender5.Size = new System.Drawing.Size(91, 93);
+            this.defender5.Size = new System.Drawing.Size(77, 83);
             this.defender5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.defender5.TabIndex = 16;
             this.defender5.TabStop = false;
@@ -189,9 +187,9 @@
             // 
             this.defender3.BackColor = System.Drawing.Color.Silver;
             this.defender3.Image = ((System.Drawing.Image)(resources.GetObject("defender3.Image")));
-            this.defender3.Location = new System.Drawing.Point(344, 172);
+            this.defender3.Location = new System.Drawing.Point(344, 125);
             this.defender3.Name = "defender3";
-            this.defender3.Size = new System.Drawing.Size(82, 78);
+            this.defender3.Size = new System.Drawing.Size(82, 76);
             this.defender3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.defender3.TabIndex = 17;
             this.defender3.TabStop = false;
@@ -200,9 +198,9 @@
             // 
             this.defender2.BackColor = System.Drawing.Color.Silver;
             this.defender2.Image = ((System.Drawing.Image)(resources.GetObject("defender2.Image")));
-            this.defender2.Location = new System.Drawing.Point(83, 402);
+            this.defender2.Location = new System.Drawing.Point(90, 314);
             this.defender2.Name = "defender2";
-            this.defender2.Size = new System.Drawing.Size(82, 80);
+            this.defender2.Size = new System.Drawing.Size(72, 75);
             this.defender2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.defender2.TabIndex = 18;
             this.defender2.TabStop = false;
@@ -257,27 +255,17 @@
             // con2
             // 
             this.con2.Image = ((System.Drawing.Image)(resources.GetObject("con2.Image")));
-            this.con2.Location = new System.Drawing.Point(218, 189);
+            this.con2.Location = new System.Drawing.Point(251, 74);
             this.con2.Name = "con2";
             this.con2.Size = new System.Drawing.Size(77, 58);
             this.con2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.con2.TabIndex = 29;
             this.con2.TabStop = false;
             // 
-            // con1
-            // 
-            this.con1.Image = ((System.Drawing.Image)(resources.GetObject("con1.Image")));
-            this.con1.Location = new System.Drawing.Point(171, 473);
-            this.con1.Name = "con1";
-            this.con1.Size = new System.Drawing.Size(77, 58);
-            this.con1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.con1.TabIndex = 30;
-            this.con1.TabStop = false;
-            // 
             // GameOver
             // 
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
-            this.GameOver.Location = new System.Drawing.Point(90, 125);
+            this.GameOver.Location = new System.Drawing.Point(96, 172);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(336, 125);
             this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,7 +275,7 @@
             // winSliver
             // 
             this.winSliver.Image = ((System.Drawing.Image)(resources.GetObject("winSliver.Image")));
-            this.winSliver.Location = new System.Drawing.Point(90, 158);
+            this.winSliver.Location = new System.Drawing.Point(90, 172);
             this.winSliver.Name = "winSliver";
             this.winSliver.Size = new System.Drawing.Size(336, 125);
             this.winSliver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +295,7 @@
             // ballcoins2
             // 
             this.ballcoins2.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins2.Image")));
-            this.ballcoins2.Location = new System.Drawing.Point(251, 89);
+            this.ballcoins2.Location = new System.Drawing.Point(217, 227);
             this.ballcoins2.Name = "ballcoins2";
             this.ballcoins2.Size = new System.Drawing.Size(32, 32);
             this.ballcoins2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -317,7 +305,7 @@
             // ballcoins3
             // 
             this.ballcoins3.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins3.Image")));
-            this.ballcoins3.Location = new System.Drawing.Point(344, 411);
+            this.ballcoins3.Location = new System.Drawing.Point(344, 314);
             this.ballcoins3.Name = "ballcoins3";
             this.ballcoins3.Size = new System.Drawing.Size(32, 32);
             this.ballcoins3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,7 +318,7 @@
             this.RestartPanel.Controls.Add(this.button4);
             this.RestartPanel.Controls.Add(this.Quit_button);
             this.RestartPanel.Controls.Add(this.restartButton);
-            this.RestartPanel.Location = new System.Drawing.Point(98, 248);
+            this.RestartPanel.Location = new System.Drawing.Point(96, 303);
             this.RestartPanel.Name = "RestartPanel";
             this.RestartPanel.Size = new System.Drawing.Size(319, 257);
             this.RestartPanel.TabIndex = 36;
@@ -391,6 +379,7 @@
             this.Controls.Add(this.RestartPanel);
             this.Controls.Add(this.ballcoins3);
             this.Controls.Add(this.GameOver);
+            this.Controls.Add(this.winSliver);
             this.Controls.Add(this.player2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.fan1);
@@ -405,13 +394,10 @@
             this.Controls.Add(this.defender3);
             this.Controls.Add(this.defender5);
             this.Controls.Add(this.defender4);
-            this.Controls.Add(this.winSliver);
             this.Controls.Add(this.ballcoins1);
             this.Controls.Add(this.ballcoins2);
             this.Controls.Add(this.con2);
-            this.Controls.Add(this.con1);
             this.Name = "Medium";
-            this.Text = "Medium";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.playerKey);
             ((System.ComponentModel.ISupportInitialize)(this.fan2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fan1)).EndInit();
@@ -430,7 +416,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fan8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.con2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.con1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.winSliver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballcoins1)).EndInit();
@@ -461,7 +446,6 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox player2;
         private System.Windows.Forms.PictureBox con2;
-        private System.Windows.Forms.PictureBox con1;
         private System.Windows.Forms.PictureBox GameOver;
         private System.Windows.Forms.PictureBox winSliver;
         private System.Windows.Forms.PictureBox ballcoins1;

@@ -24,9 +24,9 @@ namespace GameProject
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            football_Fans(3);
+            football_Fans(6);
             defend_Player(3);
-            ball(4);
+            ball(3);
             player_points();
             game_over();
 
@@ -54,6 +54,13 @@ namespace GameProject
                 GameOver.Visible = true;
             }
             if (player2.Bounds.IntersectsWith(defender5.Bounds))
+            {
+                gameTimer.Enabled = false;
+                RestartPanel.Visible = true;
+                GameOver.Visible = true;
+            }
+
+            if (player2.Bounds.IntersectsWith(con2.Bounds))
             {
                 gameTimer.Enabled = false;
                 RestartPanel.Visible = true;
@@ -89,7 +96,7 @@ namespace GameProject
             }
             else
             {
-                if (ballPoints == 45)
+                if (ballPoints == 15)
                 {
                     winSliver.Visible = true;
                     gameTimer.Enabled = false;
@@ -179,6 +186,18 @@ namespace GameProject
             else
             {
                 defender5.Top += defenderSpeed;
+            }
+
+            if (con2.Top >= 500)
+            {
+                x = rd.Next(0, 200);
+                con2.Top = 0;
+
+                con2.Location = new Point(x, 0);
+            }
+            else
+            {
+                con2.Top += defenderSpeed;
             }
         }
         private void football_Fans(int footballFanSpeed)

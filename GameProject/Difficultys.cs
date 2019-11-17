@@ -19,6 +19,8 @@ namespace GameProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             Easy es = new Easy();
             es.Show();
             Hide();

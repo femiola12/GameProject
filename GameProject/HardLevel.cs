@@ -32,21 +32,21 @@ namespace GameProject
 
         private void scores(int speed)
         {
-                if (coin1.Top >= 500)
-                {
-                    x = rn.Next(0, 122);
+           if (coin1.Top >= 500)
+           {
+              x = rn.Next(40,450 );
                     
 
-                    coin1.Location = new Point(x, 0);
-                }
-                else
-                {
-                    coin1.Top += speed;
-                }
+               coin1.Location = new Point(x, 0);
+           }
+           else
+           {
+               coin1.Top += speed;
+           }
 
             if (coin2.Top >= 500)
             {
-                x = rn.Next(0, 122);
+                x = rn.Next(30, 122);
 
 
                 coin2.Location = new Point(x, 0);
@@ -58,7 +58,7 @@ namespace GameProject
 
             if (coin3.Top >= 500)
             {
-                x = rn.Next(0, 122);
+                x = rn.Next(50, 450);
 
 
                 coin3.Location = new Point(x, 0);
@@ -70,7 +70,7 @@ namespace GameProject
 
             if (coin4.Top >= 500)
             {
-                x = rn.Next(0, 122);
+                x = rn.Next(60, 300);
 
 
                 coin4.Location = new Point(x, 0);
@@ -81,7 +81,7 @@ namespace GameProject
             }
             if (pictureBox10.Top >= 500)
             {
-                x = rn.Next(0, 122);
+                x = rn.Next(90, 200);
 
 
                 pictureBox10.Location = new Point(x, 0);
@@ -129,9 +129,36 @@ namespace GameProject
                 pictureBox10.Location = new Point(x, 0);
             }
 
+            if (player.Bounds.IntersectsWith(con2.Bounds))
+            {
+                collectionCoins++;
+                Score.Text = "Score=" + collectionCoins.ToString();
+                con2.Location = new Point(x, 0);
+            }
+
+            if (player.Bounds.IntersectsWith(con3.Bounds))
+            {
+                collectionCoins++;
+                Score.Text = "Score=" + collectionCoins.ToString();
+                con3.Location = new Point(x, 0);
+            }
+            if (player.Bounds.IntersectsWith(con4.Bounds))
+            {
+                collectionCoins++;
+                Score.Text = "Score=" + collectionCoins.ToString();
+                con4.Location = new Point(x, 0);
+            }
+
+            if (player.Bounds.IntersectsWith(con5.Bounds))
+            {
+                collectionCoins++;
+                Score.Text = "Score=" + collectionCoins.ToString();
+                con5.Location = new Point(x, 0);
+            }
+
             else
             {
-                if (collectionCoins == 10)
+                if (collectionCoins == 20)
                 {
                     GoldWin.Visible = true;
                     timer.Enabled = false;
@@ -148,29 +175,21 @@ namespace GameProject
 
             if (player_defender1.Top >= 500)
             {
-                x = rn.Next(0, 122);
+                x = rn.Next(70, 350);
                 player_defender1.Top = 0;
                 
                 player_defender1.Location = new Point(x, 0);
-            }
-            if(coin1.Top > 500)
-            {
-                x = rn.Next(0, 122);
-                coin1.Top = 0;
-
-                coin1.Location = new Point(x, 0);
             }
             else
             {
                 player_defender1.Top += speed;
             }
 
-
             if (player_defender2.Top >= 500)
             {
                 player_defender2.Top = 0;
-                x = rn.Next(0,100);
-               player_defender2.Location = new Point(x, 0);
+                x = rn.Next(10, 450);
+                player_defender2.Location = new Point(x, 0);
             }
             else
             {
@@ -181,12 +200,37 @@ namespace GameProject
             if (player_defender3.Top >= 500)
             {
                 player_defender3.Top = 0;
-                x = rn.Next(100, 300);
+                x = rn.Next(60, 350);
                 player_defender3.Location = new Point(x, 0);
             }
             else
             {
                 player_defender3.Top += speed;
+            }
+
+            if (con4.Top > 500)
+            {
+                x = rn.Next(80, 450);
+                con4.Top = 0;
+
+                con4.Location = new Point(x, 0);
+            }
+            else
+            {
+                con4.Top += speed;
+            }
+
+
+            if (con2.Top > 500)
+            {
+                x = rn.Next(80, 450);
+                con2.Top = 0;
+
+                con2.Location = new Point(x, 0);
+            }
+            else
+            {
+                con2.Top += speed;
             }
 
         }
@@ -211,11 +255,6 @@ namespace GameProject
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
             }
-            //if (player.Bounds.IntersectsWith(con1.Bounds))
-            //{
-            //    timer.Enabled = false;
-            //    GameOver.Visible = true;
-            //}
             if (player.Bounds.IntersectsWith(con2.Bounds))
             {
                 timer.Enabled = false;
@@ -242,7 +281,7 @@ namespace GameProject
             }
         }
 
-        //Here I am creating a method of the pitch speed
+      
         private void goalPost_Move(int pitchSpeed) 
         {
 
@@ -273,24 +312,6 @@ namespace GameProject
                 con5.Top += pitchSpeed;
             }
 
-            if (pictureBox6.Top >= 500)
-            {
-                pictureBox6.Top = 0;
-            }
-            else
-            {
-                pictureBox6.Top += pitchSpeed;
-            }
-
-            //if (con1.Top >= 500)
-            //{
-            //    con1.Top = 0;
-            //}
-            //else
-            //{
-            //    con1.Top += pitchSpeed;
-            //}
-
             if (con4.Top >= 500)
             {
                 con4.Top = 0;
@@ -308,16 +329,16 @@ namespace GameProject
         {
             if (e.KeyCode == Keys.Left)
             {
-                if(player.Left>0)
-                player.Left += -8;
+                if (player.Left > 20)
+                    player.Left += -40;
 
 
             }
             if (e.KeyCode == Keys.Right) 
             
             {
-                if(player.Right<300)
-                player.Left += 8;
+                if (player.Right < 400)
+                    player.Left += 40;
             }
 
             if (e.KeyCode == Keys.Up)
@@ -346,6 +367,18 @@ namespace GameProject
             HardLevel hd = new HardLevel();
             hd.Show();
             Hide();
+        }
+
+        private void backFunction_Click(object sender, EventArgs e)
+        {
+            Difficultys dif = new Difficultys();
+            dif.Show();
+            Hide();
+        }
+
+        private void Quit_button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
