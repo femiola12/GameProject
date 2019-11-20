@@ -28,7 +28,7 @@ namespace GameProject
             defend_Player(3);
             ball(3);
             player_points();
-            game_over();
+           // game_over();
 
         }
 
@@ -42,12 +42,6 @@ namespace GameProject
                 GameOver.Visible = true;
             }
             if (player2.Bounds.IntersectsWith(defender3.Bounds))
-            {
-                gameTimer.Enabled = false;
-                RestartPanel.Visible = true;
-                GameOver.Visible = true;
-            }
-            if (player2.Bounds.IntersectsWith(defender4.Bounds))
             {
                 gameTimer.Enabled = false;
                 RestartPanel.Visible = true;
@@ -75,7 +69,7 @@ namespace GameProject
             {
                 ballPoints++;
                 Points.Text = "Points =" + ballPoints.ToString();
-                x = rd.Next(50, 300);
+                x = rd.Next(40, 300);
                 ballcoins1.Location = new Point(x, 0);
             }
 
@@ -83,7 +77,7 @@ namespace GameProject
             {
                 ballPoints++;
                 Points.Text = "Points =" + ballPoints.ToString();
-                x = rd.Next(50, 300);
+                x = rd.Next(40, 300);
                 ballcoins2.Location = new Point(x, 0);
             }
 
@@ -91,7 +85,15 @@ namespace GameProject
             {
                 ballPoints++;
                 Points.Text = "Points =" + ballPoints.ToString();
-                x = rd.Next(50, 300);
+                x = rd.Next(50, 400);
+                ballcoins3.Location = new Point(x, 0);
+            }
+
+            if (player2.Bounds.IntersectsWith(ballcoins4.Bounds))
+            {
+                ballPoints++;
+                Points.Text = "Points =" + ballPoints.ToString();
+                x = rd.Next(50, 400);
                 ballcoins3.Location = new Point(x, 0);
             }
             else
@@ -103,11 +105,12 @@ namespace GameProject
                 }
             }
         }
+
         private void ball(int ballSpeed)
         {
             if (ballcoins1.Top >= 500)
             {
-                x = rd.Next(60, 122);
+                x = rd.Next(60, 100);
                 ballcoins1.Top = 0;
             }
             else
@@ -117,7 +120,7 @@ namespace GameProject
 
             if (ballcoins2.Top >= 500)
             {
-                x = rd.Next(60, 100);
+                x = rd.Next(20, 200);
                 ballcoins2.Top = 0;
             }
             else
@@ -127,12 +130,22 @@ namespace GameProject
 
             if (ballcoins3.Top >= 500)
             {
-                x = rd.Next(0, 350);
+                x = rd.Next(20, 200);
                 ballcoins3.Top = 0;
             }
             else
             {
                 ballcoins3.Top += ballSpeed;
+            }
+
+            if (ballcoins4.Top >= 500)
+            {
+                x = rd.Next(20, 350);
+                ballcoins4.Top = 0;
+            }
+            else
+            {
+                ballcoins4.Top += ballSpeed;
             }
         }
 
@@ -165,17 +178,17 @@ namespace GameProject
             {
                 defender3.Top += defenderSpeed;
             }
-            if (defender4.Top >= 500)
-            {
-                x = rd.Next(0, 350);
-                defender4.Top = 0;
+            //if (defender4.Top >= 500)
+            //{
+            //    x = rd.Next(0, 350);
+            //    defender4.Top = 0;
 
-                defender4.Location = new Point(x, 0);
-            }
-            else
-            {
-                defender4.Top += defenderSpeed;
-            }
+            //    defender4.Location = new Point(x, 0);
+            //}
+            //else
+            //{
+            //    defender4.Top += defenderSpeed;
+            //}
             if (defender5.Top >= 500)
             {
                 x = rd.Next(0, 200);
@@ -202,7 +215,7 @@ namespace GameProject
         }
         private void football_Fans(int footballFanSpeed)
         {
-            if(fan1.Top >= 500)
+            if(fan1.Top >= 100)
             {
                 fan1.Top = 0;
             }
@@ -309,5 +322,7 @@ namespace GameProject
         {
             Application.Exit();
         }
+
+
     }
 }

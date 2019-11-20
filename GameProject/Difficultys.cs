@@ -19,7 +19,8 @@ namespace GameProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            System.Media.SoundPlayer player1 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
+            player1.Stop();
 
             Easy es = new Easy();
             es.Show();
@@ -28,6 +29,8 @@ namespace GameProject
 
         private void button3_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player1 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
+            player1.Stop();
             HardLevel hd = new HardLevel();
             hd.Show();
             Hide();
@@ -35,6 +38,8 @@ namespace GameProject
 
         private void button2_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player1 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
+            player1.Stop();
             Medium me = new Medium();
             me.Show();
             Hide();

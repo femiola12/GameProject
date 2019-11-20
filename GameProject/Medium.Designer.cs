@@ -38,7 +38,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Points = new System.Windows.Forms.Label();
-            this.defender4 = new System.Windows.Forms.PictureBox();
             this.defender5 = new System.Windows.Forms.PictureBox();
             this.defender3 = new System.Windows.Forms.PictureBox();
             this.defender2 = new System.Windows.Forms.PictureBox();
@@ -57,6 +56,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.Quit_button = new System.Windows.Forms.Button();
             this.restartButton = new System.Windows.Forms.Button();
+            this.ballcoins4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.fan2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fan1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fan3)).BeginInit();
@@ -64,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fan6)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defender4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender2)).BeginInit();
@@ -79,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ballcoins2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballcoins3)).BeginInit();
             this.RestartPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ballcoins4)).BeginInit();
             this.SuspendLayout();
             // 
             // fan2
@@ -162,17 +162,6 @@
             this.Points.TabIndex = 8;
             this.Points.Text = "Points : 0";
             // 
-            // defender4
-            // 
-            this.defender4.BackColor = System.Drawing.Color.Transparent;
-            this.defender4.Image = ((System.Drawing.Image)(resources.GetObject("defender4.Image")));
-            this.defender4.Location = new System.Drawing.Point(324, -20);
-            this.defender4.Name = "defender4";
-            this.defender4.Size = new System.Drawing.Size(91, 88);
-            this.defender4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.defender4.TabIndex = 13;
-            this.defender4.TabStop = false;
-            // 
             // defender5
             // 
             this.defender5.Image = ((System.Drawing.Image)(resources.GetObject("defender5.Image")));
@@ -255,7 +244,7 @@
             // con2
             // 
             this.con2.Image = ((System.Drawing.Image)(resources.GetObject("con2.Image")));
-            this.con2.Location = new System.Drawing.Point(90, 243);
+            this.con2.Location = new System.Drawing.Point(191, 301);
             this.con2.Name = "con2";
             this.con2.Size = new System.Drawing.Size(77, 58);
             this.con2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -265,7 +254,7 @@
             // GameOver
             // 
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
-            this.GameOver.Location = new System.Drawing.Point(90, 112);
+            this.GameOver.Location = new System.Drawing.Point(-20, 19);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(336, 125);
             this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +264,7 @@
             // winSliver
             // 
             this.winSliver.Image = ((System.Drawing.Image)(resources.GetObject("winSliver.Image")));
-            this.winSliver.Location = new System.Drawing.Point(90, 112);
+            this.winSliver.Location = new System.Drawing.Point(0, 19);
             this.winSliver.Name = "winSliver";
             this.winSliver.Size = new System.Drawing.Size(336, 125);
             this.winSliver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,6 +273,7 @@
             // 
             // ballcoins1
             // 
+            this.ballcoins1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ballcoins1.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins1.Image")));
             this.ballcoins1.Location = new System.Drawing.Point(217, 65);
             this.ballcoins1.Name = "ballcoins1";
@@ -294,6 +284,7 @@
             // 
             // ballcoins2
             // 
+            this.ballcoins2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ballcoins2.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins2.Image")));
             this.ballcoins2.Location = new System.Drawing.Point(217, 227);
             this.ballcoins2.Name = "ballcoins2";
@@ -304,6 +295,7 @@
             // 
             // ballcoins3
             // 
+            this.ballcoins3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ballcoins3.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins3.Image")));
             this.ballcoins3.Location = new System.Drawing.Point(344, 327);
             this.ballcoins3.Name = "ballcoins3";
@@ -317,8 +309,10 @@
             this.RestartPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RestartPanel.Controls.Add(this.button4);
             this.RestartPanel.Controls.Add(this.Quit_button);
+            this.RestartPanel.Controls.Add(this.winSliver);
+            this.RestartPanel.Controls.Add(this.GameOver);
             this.RestartPanel.Controls.Add(this.restartButton);
-            this.RestartPanel.Location = new System.Drawing.Point(87, 265);
+            this.RestartPanel.Location = new System.Drawing.Point(87, 538);
             this.RestartPanel.Name = "RestartPanel";
             this.RestartPanel.Size = new System.Drawing.Size(319, 257);
             this.RestartPanel.TabIndex = 36;
@@ -370,6 +364,16 @@
             this.restartButton.UseVisualStyleBackColor = false;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
             // 
+            // ballcoins4
+            // 
+            this.ballcoins4.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins4.Image")));
+            this.ballcoins4.Location = new System.Drawing.Point(112, 151);
+            this.ballcoins4.Name = "ballcoins4";
+            this.ballcoins4.Size = new System.Drawing.Size(32, 32);
+            this.ballcoins4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ballcoins4.TabIndex = 37;
+            this.ballcoins4.TabStop = false;
+            // 
             // Medium
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -378,8 +382,6 @@
             this.ClientSize = new System.Drawing.Size(507, 752);
             this.Controls.Add(this.RestartPanel);
             this.Controls.Add(this.ballcoins3);
-            this.Controls.Add(this.GameOver);
-            this.Controls.Add(this.winSliver);
             this.Controls.Add(this.player2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.fan1);
@@ -393,10 +395,10 @@
             this.Controls.Add(this.defender2);
             this.Controls.Add(this.defender3);
             this.Controls.Add(this.defender5);
-            this.Controls.Add(this.defender4);
             this.Controls.Add(this.ballcoins1);
             this.Controls.Add(this.ballcoins2);
             this.Controls.Add(this.con2);
+            this.Controls.Add(this.ballcoins4);
             this.Name = "Medium";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.playerKey);
             ((System.ComponentModel.ISupportInitialize)(this.fan2)).EndInit();
@@ -407,7 +409,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.defender4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.defender2)).EndInit();
@@ -422,6 +423,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ballcoins2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballcoins3)).EndInit();
             this.RestartPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ballcoins4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,7 +438,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label Points;
-        private System.Windows.Forms.PictureBox defender4;
         private System.Windows.Forms.PictureBox defender5;
         private System.Windows.Forms.PictureBox defender3;
         private System.Windows.Forms.PictureBox defender2;
@@ -455,5 +456,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button Quit_button;
         private System.Windows.Forms.Button restartButton;
+        private System.Windows.Forms.PictureBox ballcoins4;
     }
 }

@@ -7,18 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Media;
+using System.Windows.Media;
+
 
 namespace GameProject
 {
     public partial class Easy : Form
     {
+        private SoundPlayer Player = new SoundPlayer();
         public Easy()
         {
             InitializeComponent();
             Win.Visible = false;
             GameOver.Visible = false;
             RestartPanel.Visible = false;
-        }
+            SaveGame.Visible = false;
+
+
+
+      }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -27,9 +36,11 @@ namespace GameProject
             game_over();
             points();
             ball(3);
-
         }
 
+
+
+        
         private void game_over()
         {
             if (player1.Bounds.IntersectsWith(defender1.Bounds))
@@ -37,24 +48,41 @@ namespace GameProject
                 timer1.Enabled = false;
                 RestartPanel.Visible = true;
                 GameOver.Visible = true;
+                System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Crowd Voices Angry.wav");
+                sound3.Play();
+
             }
             if (player1.Bounds.IntersectsWith(defender2.Bounds))
             {
                 timer1.Enabled = false;
                 RestartPanel.Visible = true;
                 GameOver.Visible = true;
+
+                System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Crowd Voices Angry.wav");
+                sound3.Play();
             }
             if (player1.Bounds.IntersectsWith(defender3.Bounds))
             {
                 timer1.Enabled = false;
                 RestartPanel.Visible = true;
                 GameOver.Visible = true;
+
+                System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Crowd Voices Angry.wav");
+                sound3.Play();
             }
             if (player1.Bounds.IntersectsWith(defender4.Bounds))
             {
                 timer1.Enabled = false;
                 RestartPanel.Visible = true;
                 GameOver.Visible = true;
+                System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Crowd Voices Angry.wav");
+                sound3.Play();
+            }
+            if(GameOver.Visible == true)
+            {
+                SaveGame.Visible = true;
+               
+                scoreTextBox.Text = pointCoins.ToString();
             }
         }
 
@@ -62,12 +90,15 @@ namespace GameProject
 
         private void points()
         {
+
             if (player1.Bounds.IntersectsWith(ballCoin1.Bounds))
             {
                 pointCoins++;
                 Score.Text = "Score=" + pointCoins.ToString();
                 x = rn.Next(50, 300);
-                ballCoin1.Location = new Point(x, 0);   
+                ballCoin1.Location = new Point(x, 0);
+                //System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Coin Pickup Sound.wav");
+                //sound3.Play();
             }
 
             if (player1.Bounds.IntersectsWith(ballCoin2.Bounds))
@@ -76,6 +107,9 @@ namespace GameProject
                 Score.Text = "Score=" + pointCoins.ToString();
                 x = rn.Next(50, 300);
                 ballCoin2.Location = new Point(x, 0);
+                //System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Coin Pickup Sound.wav");
+                //sound3.Play();
+
             }
 
             if (player1.Bounds.IntersectsWith(ballCoin3.Bounds))
@@ -84,6 +118,9 @@ namespace GameProject
                 Score.Text = "Score=" + pointCoins.ToString();
                 x = rn.Next(50, 300);
                 ballCoin3.Location = new Point(x, 0);
+                //System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Coin Pickup Sound.wav");
+                //sound3.Play();
+
             }
             if (player1.Bounds.IntersectsWith(ballCoin4.Bounds))
             {
@@ -91,23 +128,27 @@ namespace GameProject
                 Score.Text = "Score=" + pointCoins.ToString();
                 x = rn.Next(50, 300);
                 ballCoin4.Location = new Point(x, 0);
+                //System.Media.SoundPlayer sound3 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Coin Pickup Sound.wav");
+                //sound3.Play();
+
             }
             else
             {
-                if(pointCoins == 10)
+                if(pointCoins == 5)
                 {
                     Win.Visible = true;
                     RestartPanel.Visible = true;
                     timer1.Enabled = false;
-                    
+                    System.Media.SoundPlayer sound4 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\UEFA Champions League .wav");
+                    sound4.Play();
+
+
                 }
+
             }
 
 
         }
-
-
-
 
 
         Random rn = new Random();
@@ -295,6 +336,10 @@ namespace GameProject
             Easy ea = new Easy();
             ea.Show();
             Hide();
+            System.Media.SoundPlayer sound4 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\UEFA Champions League .wav");
+            sound4.Stop();
+            System.Media.SoundPlayer sound5 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Sports Stadium Crowd Cheering.wav");
+            sound5.PlayLooping();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -302,6 +347,10 @@ namespace GameProject
             Difficultys dif = new Difficultys();
             dif.Show();
             Hide();
+            System.Media.SoundPlayer sound4 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\UEFA Champions League .wav");
+            sound4.Stop();
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
+            player.Play();
         }
 
         private void Quit_button_Click(object sender, EventArgs e)
@@ -309,9 +358,38 @@ namespace GameProject
             Application.Exit();
         }
 
-        private void GameOver_Click(object sender, EventArgs e)
+        private  void Save_Button_Click(object sender, EventArgs e)
         {
+            //StreamWriter sw = new StreamWriter(Application.StartupPath + "\\Scores\\" + NametextBox.Text + " " + scoreTextBox.Text + ".txt");
+            //sw.WriteLine(label1.Text + " " + NametextBox.Text);
+            //sw.WriteLine(Scorelabel.Text + " " + scoreTextBox.Text);
+            //sw.Close();
 
+            
+            TextWriter txt = new StreamWriter(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\bin\Debug\Scores\Scores.txt");
+            txt.WriteLine($"\n");
+            txt.WriteLine(label1.Text + " " + NametextBox.Text);
+            txt.WriteLine(Scorelabel.Text + " " + scoreTextBox.Text);
+            //txt.WriteLine(richTextBox1.Text);
+            txt.Close();
+
+
+
+
+
+
+            StreamReader sw1 = new StreamReader(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\GameProject\GameProject\bin\Debug\Scores\Scores.txt");
+
+            richTextBox1.Text = sw1.ReadToEnd();
+            sw1.Dispose();
+            sw1.Close();
+
+        }
+
+        private void Easy_Load(object sender, EventArgs e)
+        {
+            System.Media.SoundPlayer sound5 = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Sports Stadium Crowd Cheering.wav");
+            sound5.PlayLooping();
         }
     }
 }
