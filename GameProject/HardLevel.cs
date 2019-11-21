@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace GameProject
 {
     public partial class HardLevel : Form
     {
+        private SoundPlayer crowd = new SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Sports Stadium Crowd Cheering.wav");
+        private SoundPlayer winSound = new SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\UEFA Champions League .wav");
+        private SoundPlayer gameOverSound = new SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Crowd Voices Angry.wav");
+        private SoundPlayer gameStartMusic = new SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
         public HardLevel()
         {
             InitializeComponent();
@@ -79,16 +78,16 @@ namespace GameProject
             {
                 coin4.Top += speed;
             }
-            if (pictureBox10.Top >= 500)
+            if (coin5.Top >= 500)
             {
                 x = rn.Next(90, 200);
 
 
-                pictureBox10.Location = new Point(x, 0);
+                coin5.Location = new Point(x, 0);
             }
             else
             {
-                pictureBox10.Top += speed;
+                coin5.Top += speed;
             }
         }
 
@@ -103,30 +102,35 @@ namespace GameProject
                 collectionCoins++;
                 Score.Text = "Score=" + collectionCoins.ToString();
                 coin1.Location = new Point(x, 0);
+                coinSound();
             }
             if (player.Bounds.IntersectsWith(coin2.Bounds))
             {
                 collectionCoins++;
                 Score.Text = "Score=" + collectionCoins.ToString();
                 coin2.Location = new Point(x, 0);
+                coinSound();
             }
             if (player.Bounds.IntersectsWith(coin3.Bounds))
             {
                 collectionCoins++;
                 Score.Text = "Score=" + collectionCoins.ToString();
                 coin3.Location = new Point(x, 0);
+                coinSound();
             }
             if (player.Bounds.IntersectsWith(coin4.Bounds))
             {
                 collectionCoins++;
                 Score.Text = "Score=" + collectionCoins.ToString();
                 coin4.Location = new Point(x, 0);
+                coinSound();
             }
-            if (player.Bounds.IntersectsWith(pictureBox10.Bounds))
+            if (player.Bounds.IntersectsWith(coin5.Bounds))
             {
                 collectionCoins++;
                 Score.Text = "Score=" + collectionCoins.ToString();
-                pictureBox10.Location = new Point(x, 0);
+                coin5.Location = new Point(x, 0);
+                coinSound();
             }
 
             if (player.Bounds.IntersectsWith(con2.Bounds))
@@ -163,6 +167,7 @@ namespace GameProject
                     GoldWin.Visible = true;
                     timer.Enabled = false;
                     RestartPanel.Visible = true;
+                    winSound.Play();
                 }
             }
         }
@@ -242,46 +247,60 @@ namespace GameProject
                 timer.Enabled = false;
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
+                gameOverSound.Play();
             }
             if (player.Bounds.IntersectsWith(player_defender2.Bounds))
             {
                 timer.Enabled = false;
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
+                gameOverSound.Play();
             }
             if (player.Bounds.IntersectsWith(player_defender3.Bounds))
             {
                 timer.Enabled = false;
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
+                gameOverSound.Play();
             }
             if (player.Bounds.IntersectsWith(con2.Bounds))
             {
                 timer.Enabled = false;
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
+                gameOverSound.Play();
             }
             if (player.Bounds.IntersectsWith(con3.Bounds))
             {
                 timer.Enabled = false;
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
+                gameOverSound.Play();
             }
             if (player.Bounds.IntersectsWith(con4.Bounds))
             {
                 timer.Enabled = false;
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
+                gameOverSound.Play();
             }
             if (player.Bounds.IntersectsWith(con5.Bounds))
             {
                 timer.Enabled = false;
                 GameOver.Visible = true;
                 RestartPanel.Visible = true;
+                gameOverSound.Play();
             }
         }
 
-      
+        public void coinSound()
+        {
+            var collectCoins = new System.Windows.Media.MediaPlayer();
+            collectCoins.Open(new System.Uri(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Coin Pickup Sound.wav"));
+            collectCoins.Play();
+        }
+
+
         private void goalPost_Move(int pitchSpeed) 
         {
 
@@ -367,6 +386,8 @@ namespace GameProject
             HardLevel hd = new HardLevel();
             hd.Show();
             Hide();
+            crowd.PlayLooping();
+
         }
 
         private void backFunction_Click(object sender, EventArgs e)
@@ -374,11 +395,17 @@ namespace GameProject
             Difficultys dif = new Difficultys();
             dif.Show();
             Hide();
+            gameStartMusic.PlayLooping();
         }
 
         private void Quit_button_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void HardLevel_Load(object sender, EventArgs e)
+        {
+            crowd.PlayLooping();
         }
     }
 }

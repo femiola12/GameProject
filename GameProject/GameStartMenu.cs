@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameProject
@@ -16,8 +9,8 @@ namespace GameProject
         {
             InitializeComponent();
 
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
-            player.PlayLooping();
+            System.Media.SoundPlayer menuSound = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
+            menuSound.PlayLooping();
         }
 
         private void Quit_button_Click(object sender, EventArgs e)

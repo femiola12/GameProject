@@ -1,2 +1,0 @@
-Firstname femi
-Score 8

@@ -140,7 +140,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(532, 241);
             this.panel1.TabIndex = 10;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox6
             // 
@@ -244,7 +243,7 @@
             // con2
             // 
             this.con2.Image = ((System.Drawing.Image)(resources.GetObject("con2.Image")));
-            this.con2.Location = new System.Drawing.Point(191, 301);
+            this.con2.Location = new System.Drawing.Point(189, 385);
             this.con2.Name = "con2";
             this.con2.Size = new System.Drawing.Size(77, 58);
             this.con2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -254,7 +253,7 @@
             // GameOver
             // 
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
-            this.GameOver.Location = new System.Drawing.Point(-20, 19);
+            this.GameOver.Location = new System.Drawing.Point(90, 85);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(336, 125);
             this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +263,7 @@
             // winSliver
             // 
             this.winSliver.Image = ((System.Drawing.Image)(resources.GetObject("winSliver.Image")));
-            this.winSliver.Location = new System.Drawing.Point(0, 19);
+            this.winSliver.Location = new System.Drawing.Point(90, 85);
             this.winSliver.Name = "winSliver";
             this.winSliver.Size = new System.Drawing.Size(336, 125);
             this.winSliver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +274,7 @@
             // 
             this.ballcoins1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ballcoins1.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins1.Image")));
-            this.ballcoins1.Location = new System.Drawing.Point(217, 65);
+            this.ballcoins1.Location = new System.Drawing.Point(344, 44);
             this.ballcoins1.Name = "ballcoins1";
             this.ballcoins1.Size = new System.Drawing.Size(32, 32);
             this.ballcoins1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -286,7 +285,7 @@
             // 
             this.ballcoins2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ballcoins2.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins2.Image")));
-            this.ballcoins2.Location = new System.Drawing.Point(217, 227);
+            this.ballcoins2.Location = new System.Drawing.Point(217, 216);
             this.ballcoins2.Name = "ballcoins2";
             this.ballcoins2.Size = new System.Drawing.Size(32, 32);
             this.ballcoins2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,7 +294,7 @@
             // 
             // ballcoins3
             // 
-            this.ballcoins3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ballcoins3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ballcoins3.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins3.Image")));
             this.ballcoins3.Location = new System.Drawing.Point(344, 327);
             this.ballcoins3.Name = "ballcoins3";
@@ -309,10 +308,8 @@
             this.RestartPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.RestartPanel.Controls.Add(this.button4);
             this.RestartPanel.Controls.Add(this.Quit_button);
-            this.RestartPanel.Controls.Add(this.winSliver);
-            this.RestartPanel.Controls.Add(this.GameOver);
             this.RestartPanel.Controls.Add(this.restartButton);
-            this.RestartPanel.Location = new System.Drawing.Point(87, 538);
+            this.RestartPanel.Location = new System.Drawing.Point(90, 232);
             this.RestartPanel.Name = "RestartPanel";
             this.RestartPanel.Size = new System.Drawing.Size(319, 257);
             this.RestartPanel.TabIndex = 36;
@@ -367,7 +364,7 @@
             // ballcoins4
             // 
             this.ballcoins4.Image = ((System.Drawing.Image)(resources.GetObject("ballcoins4.Image")));
-            this.ballcoins4.Location = new System.Drawing.Point(112, 151);
+            this.ballcoins4.Location = new System.Drawing.Point(90, 125);
             this.ballcoins4.Name = "ballcoins4";
             this.ballcoins4.Size = new System.Drawing.Size(32, 32);
             this.ballcoins4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -382,6 +379,8 @@
             this.ClientSize = new System.Drawing.Size(507, 752);
             this.Controls.Add(this.RestartPanel);
             this.Controls.Add(this.ballcoins3);
+            this.Controls.Add(this.GameOver);
+            this.Controls.Add(this.winSliver);
             this.Controls.Add(this.player2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.fan1);
@@ -400,6 +399,7 @@
             this.Controls.Add(this.con2);
             this.Controls.Add(this.ballcoins4);
             this.Name = "Medium";
+            this.Load += new System.EventHandler(this.Medium_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.playerKey);
             ((System.ComponentModel.ISupportInitialize)(this.fan2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fan1)).EndInit();

@@ -43,7 +43,7 @@
             this.player_defender3 = new System.Windows.Forms.PictureBox();
             this.coin4 = new System.Windows.Forms.PictureBox();
             this.coin2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.coin5 = new System.Windows.Forms.PictureBox();
             this.coin3 = new System.Windows.Forms.PictureBox();
             this.coin1 = new System.Windows.Forms.PictureBox();
             this.Score = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.player_defender3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -206,15 +206,15 @@
             this.coin2.TabIndex = 19;
             this.coin2.TabStop = false;
             // 
-            // pictureBox10
+            // coin5
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(65, 258);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 20;
-            this.pictureBox10.TabStop = false;
+            this.coin5.Image = ((System.Drawing.Image)(resources.GetObject("coin5.Image")));
+            this.coin5.Location = new System.Drawing.Point(65, 258);
+            this.coin5.Name = "coin5";
+            this.coin5.Size = new System.Drawing.Size(35, 35);
+            this.coin5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coin5.TabIndex = 20;
+            this.coin5.TabStop = false;
             // 
             // coin3
             // 
@@ -269,7 +269,7 @@
             // GameOver
             // 
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
-            this.GameOver.Location = new System.Drawing.Point(89, 74);
+            this.GameOver.Location = new System.Drawing.Point(106, 131);
             this.GameOver.Name = "GameOver";
             this.GameOver.Size = new System.Drawing.Size(336, 125);
             this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -279,7 +279,7 @@
             // GoldWin
             // 
             this.GoldWin.Image = ((System.Drawing.Image)(resources.GetObject("GoldWin.Image")));
-            this.GoldWin.Location = new System.Drawing.Point(122, 74);
+            this.GoldWin.Location = new System.Drawing.Point(122, 122);
             this.GoldWin.Name = "GoldWin";
             this.GoldWin.Size = new System.Drawing.Size(301, 138);
             this.GoldWin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +292,7 @@
             this.RestartPanel.Controls.Add(this.backFunction);
             this.RestartPanel.Controls.Add(this.Quit_button);
             this.RestartPanel.Controls.Add(this.restartButton);
-            this.RestartPanel.Location = new System.Drawing.Point(106, 233);
+            this.RestartPanel.Location = new System.Drawing.Point(107, 266);
             this.RestartPanel.Name = "RestartPanel";
             this.RestartPanel.Size = new System.Drawing.Size(319, 257);
             this.RestartPanel.TabIndex = 37;
@@ -352,8 +352,8 @@
             this.ClientSize = new System.Drawing.Size(507, 752);
             this.Controls.Add(this.RestartPanel);
             this.Controls.Add(this.GameOver);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.GoldWin);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -368,10 +368,11 @@
             this.Controls.Add(this.coin2);
             this.Controls.Add(this.coin4);
             this.Controls.Add(this.coin3);
-            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.coin5);
             this.ForeColor = System.Drawing.Color.Crimson;
             this.Name = "HardLevel";
-            this.Text = "Form1";
+            this.Text = "Hard";
+            this.Load += new System.EventHandler(this.HardLevel_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Player_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -385,7 +386,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.player_defender3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coin5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -412,7 +413,7 @@
         private System.Windows.Forms.PictureBox player_defender3;
         private System.Windows.Forms.PictureBox coin4;
         private System.Windows.Forms.PictureBox coin2;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox coin5;
         private System.Windows.Forms.PictureBox coin3;
         private System.Windows.Forms.PictureBox coin1;
         private System.Windows.Forms.Label Score;

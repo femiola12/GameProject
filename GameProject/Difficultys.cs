@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace GameProject
 {
@@ -50,6 +44,8 @@ namespace GameProject
             GameStartMenu gsm = new GameStartMenu();
             gsm.Show();
             Hide();
+            System.Media.SoundPlayer menuSound = new System.Media.SoundPlayer(@"C:\Users\FOladiji\Engineering45\WEEK3\Day5\Same Old Story.wav");
+            menuSound.PlayLooping();
         }
     }
 }
